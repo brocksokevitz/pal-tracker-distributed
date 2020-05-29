@@ -2,7 +2,7 @@ applications:
 - name: tracker-backlog
   path: ./applications/backlog-server/build/libs/backlog-server.jar
   routes:
-  - route: backlog-pal-brock-sokevitz.cfapps.io
+  - route: backlog-pal-brock-sokevitz.cfapps.io/actuator/health
   memory: 1G
   instances: 1
   env:
@@ -12,3 +12,4 @@ applications:
   - tracker-backlog-database
   - tracker-service-registry
   - tracker-sso
+  - tracker-config-server
